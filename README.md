@@ -7,6 +7,7 @@ Sitio estatico para una marca de psicologia aplicada, psicoeducacion, claridad p
 - `index.html`: estructura de la pagina.
 - `styles.css`: estilos responsive.
 - `script.js`: menu movil y formulario que prepara una solicitud copiable.
+- `translations.js`: selector y paquetes de idioma para ES, EN, DE, FR, PT, IT, RU, CS, ZH, JA, HE y AR.
 - `assets/hero-psyche-lab.png`: imagen principal generada para el sitio.
 - `assets/consulta-psyche-lab.png`: imagen editorial para enfoque profesional.
 - `assets/articulos-psyche-lab.png`: imagen editorial para biblioteca de articulos.
@@ -29,5 +30,6 @@ Psyche Lab se presenta como psicoeducacion, analisis psicologico orientativo, cl
 - Preguntas frecuentes.
 - Aviso de limites profesionales.
 - Boton flotante de WhatsApp.
+- Selector multilenguaje con soporte RTL para hebreo y arabe.
 
 Deployment refresh: 2026-06-30.

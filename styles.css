@@ -34,6 +34,21 @@ body {
   font-family: Inter, Avenir, "Segoe UI", Arial, sans-serif;
 }
 
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .site-header,
+html[dir="rtl"] .brand,
+html[dir="rtl"] .site-nav,
+html[dir="rtl"] .hero-actions,
+html[dir="rtl"] .trust-row,
+html[dir="rtl"] .contact-tags,
+html[dir="rtl"] .language-switcher,
+html[dir="rtl"] .direct-contact {
+  direction: rtl;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -114,7 +129,8 @@ p {
 .site-nav,
 .hero-actions,
 .trust-row,
-.contact-tags {
+.contact-tags,
+.language-switcher {
   display: flex;
   align-items: center;
 }
@@ -171,6 +187,30 @@ p {
 
 .site-nav a:hover {
   color: var(--teal);
+}
+
+.language-switcher {
+  gap: 8px;
+  margin-left: auto;
+}
+
+.language-switcher label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.language-switcher select {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 900;
+  padding: 0 9px;
 }
 
 .nav-cta,
@@ -869,6 +909,14 @@ textarea {
 
   .brand {
     min-width: 0;
+  }
+
+  .language-switcher {
+    margin-left: 0;
+  }
+
+  .language-switcher label {
+    display: none;
   }
 
   .brand strong,
