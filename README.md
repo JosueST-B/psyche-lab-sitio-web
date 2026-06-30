@@ -29,3 +29,5 @@ Psyche Lab se presenta como psicoeducacion, analisis psicologico orientativo, cl
 - Preguntas frecuentes.
 - Aviso de limites profesionales.
 - Boton flotante de WhatsApp.
+
+Deployment refresh: 2026-06-30.
