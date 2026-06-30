@@ -50,7 +50,9 @@ const applyLanguage = (lang) => {
   collectTextNodes().forEach((node) => {
     const original = node.originalTrimmed || node.textContent.trim().replace(/\s+/g, " ");
     const translated = translate(original, activeLang);
-    node.textContent = node.originalText.replace(original, translated);
+    const leading = node.originalText.match(/^\s*/)?.[0] || "";
+    const trailing = node.originalText.match(/\s*$/)?.[0] || "";
+    node.textContent = `${leading}${translated}${trailing}`;
   });
 
   document.querySelectorAll("*").forEach((element) => {
