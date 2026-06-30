@@ -11,6 +11,7 @@ const translate = (key, lang = document.documentElement.lang || "es") => {
 
 const translatableAttributes = ["placeholder", "aria-label", "alt", "title", "content"];
 const excludedTags = new Set(["SCRIPT", "STYLE", "NOSCRIPT"]);
+const attributeMemoryKey = (attr) => `original${attr.replace(/[^a-z0-9]/gi, "")}`;
 
 const collectTextNodes = (root = document.body) => {
   const nodeFilter = window.NodeFilter || { SHOW_TEXT: 4, FILTER_ACCEPT: 1, FILTER_REJECT: 2 };
@@ -35,7 +36,7 @@ const prepareTranslationMemory = () => {
   document.querySelectorAll("*").forEach((element) => {
     translatableAttributes.forEach((attr) => {
       if (element.hasAttribute(attr)) {
-        element.dataset[`original${attr}`] = element.getAttribute(attr);
+        element.dataset[attributeMemoryKey(attr)] = element.getAttribute(attr);
       }
     });
   });
@@ -54,7 +55,7 @@ const applyLanguage = (lang) => {
 
   document.querySelectorAll("*").forEach((element) => {
     translatableAttributes.forEach((attr) => {
-      const original = element.dataset[`original${attr}`];
+      const original = element.dataset[attributeMemoryKey(attr)];
       if (original) element.setAttribute(attr, translate(original, activeLang));
     });
   });
@@ -89,7 +90,8 @@ if (menuButton && siteNav) {
 prepareTranslationMemory();
 
 if (languageSelect) {
-  const savedLanguage = localStorage.getItem("psycheLabLanguage") || "es";
+  const urlLanguage = new URLSearchParams(window.location.search).get("lang");
+  const savedLanguage = urlLanguage || localStorage.getItem("psycheLabLanguage") || "es";
   applyLanguage(savedLanguage);
   languageSelect.addEventListener("change", (event) => applyLanguage(event.target.value));
 }
