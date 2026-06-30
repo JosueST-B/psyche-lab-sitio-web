@@ -33,3 +33,5 @@ Psyche Lab se presenta como psicoeducacion, analisis psicologico orientativo, cl
 - Selector multilenguaje con soporte RTL para hebreo y arabe.
 
 Deployment refresh: 2026-06-30.
+
+Public verification refresh: 2026-06-30 language switcher fixed.
