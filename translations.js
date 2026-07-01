@@ -711,3 +711,49 @@ Object.entries(mentalHealthTranslations).forEach(([language, entries]) => {
     ...entries,
   };
 });
+
+const contentUpdateTranslations = {
+  en: {
+    "Psyche Lab | Psicologia aplicada y salud mental": "Psyche Lab | Applied psychology and mental health",
+    "Psyche Lab ofrece psicologia aplicada, psicoeducacion, claridad psicologica, orientacion en salud mental, apego, habitos y recursos digitales.": "Psyche Lab offers applied psychology, psychoeducation, psychological clarity, mental health orientation, attachment, habits and digital resources.",
+    "Psicoeducacion profunda, orientacion en salud mental, mapas psicologicos, apego, habitos y claridad estrategica.": "Deep psychoeducation, mental health orientation, psychological maps, attachment, habits and strategic clarity.",
+    "Laboratorio moderno de psicologia, salud mental y evaluacion neuropsicologica": "Modern psychology, mental health and neuropsychological assessment lab",
+    "Psicoeducacion - Salud mental - Vinculos - Decision": "Psychoeducation - Mental health - Bonds - Decision",
+    "Psicologia aplicada con lenguaje humano, mirada clinica responsable y estructura practica para entender patrones, ordenar sintomas, fortalecer habitos y tomar decisiones con mayor claridad.": "Applied psychology with human language, responsible clinical perspective and practical structure to understand patterns, organize symptoms, strengthen habits and make clearer decisions.",
+    "Psyche Lab analiza conducta, vinculos, narrativas personales, toma de decisiones organizacion cotidiana y senales de salud mental desde una base psicoeducativa solida. No promete diagnosticos ni terapia clinica remota: entrega claridad, mapas, recursos y acompanamiento estructurado para pensar mejor la propia vida y saber cuando conviene buscar atencion especializada.": "Psyche Lab analyzes behavior, bonds, personal narratives, decision-making, daily organization and mental health signs from a solid psychoeducational base. It does not promise diagnoses or remote clinical therapy: it provides clarity, maps, resources and structured guidance to think about life more clearly and know when specialized care may be appropriate.",
+    "Diapositivas": "Slides",
+    "Diapositivas y mapas clinicos": "Slides and clinical maps",
+    "Material visual para estudiar, compartir y convertir confusion en estructura.": "Visual material to study, share and turn confusion into structure.",
+    "Psyche Lab puede convertir cada tema en guias, PDFs, audios o diapositivas: piezas breves, profesionales y accionables para estudiantes, pacientes psicoeducativos, creadores de contenido y personas que quieren entenderse mejor.": "Psyche Lab can turn each topic into guides, PDFs, audios or slides: brief, professional and actionable pieces for students, psychoeducational clients, content creators and people who want to understand themselves better.",
+    "Mapa de consulta psiquiatrica": "Psychiatric consultation map",
+    "Que observar antes de una valoracion: sintomas, duracion, sueno, apetito, energia, sustancias, riesgo, antecedentes y preguntas para el medico.": "What to observe before an assessment: symptoms, duration, sleep, appetite, energy, substances, risk, history and questions for the physician.",
+    "Checklist previo a consulta": "Pre-consultation checklist",
+    "Linea de tiempo de sintomas": "Symptom timeline",
+    "Preguntas para derivacion segura": "Questions for safe referral",
+    "Apego en lenguaje simple": "Attachment in simple language",
+    "Estilos de apego, detonantes, estrategias defensivas, necesidades afectivas y formas de construir seguridad.": "Attachment styles, triggers, defensive strategies, emotional needs and ways to build security.",
+    "Ansiedad: cuerpo, mente y conducta": "Anxiety: body, mind and behavior",
+    "Como diferenciar preocupacion, evitacion, panico, vigilancia y estrategias de regulacion cotidiana.": "How to differentiate worry, avoidance, panic, vigilance and everyday regulation strategies.",
+    "Habitos y salud mental": "Habits and mental health",
+    "Rutina, sueno, energia, friccion, recompensa, seguimiento y prevencion de recaidas conductuales.": "Routine, sleep, energy, friction, reward, tracking and prevention of behavioral relapse.",
+    "Preparar Consulta de Salud Mental": "Prepare a Mental Health Consultation",
+    "Ordena sintomas, antecedentes, dudas, medicacion actual, sustancias, riesgos y objetivos antes de acudir a un profesional.": "Organize symptoms, history, doubts, current medication, substances, risks and goals before seeing a professional.",
+  },
+  de: { "Diapositivas": "Folien", "Diapositivas y mapas clinicos": "Folien und klinische Karten" },
+  fr: { "Diapositivas": "Diapositives", "Diapositivas y mapas clinicos": "Diapositives et cartes cliniques" },
+  pt: { "Diapositivas": "Slides", "Diapositivas y mapas clinicos": "Slides e mapas clinicos" },
+  it: { "Diapositivas": "Diapositive", "Diapositivas y mapas clinicos": "Diapositive e mappe cliniche" },
+  ru: { "Diapositivas": "Slides", "Diapositivas y mapas clinicos": "Slides and clinical maps" },
+  cs: { "Diapositivas": "Slidy", "Diapositivas y mapas clinicos": "Slidy a klinicke mapy" },
+  zh: { "Diapositivas": "Slides", "Diapositivas y mapas clinicos": "Slides and clinical maps" },
+  ja: { "Diapositivas": "Slides", "Diapositivas y mapas clinicos": "Slides and clinical maps" },
+  he: { "Diapositivas": "Slides", "Diapositivas y mapas clinicos": "Slides and clinical maps" },
+  ar: { "Diapositivas": "Slides", "Diapositivas y mapas clinicos": "Slides and clinical maps" },
+};
+
+Object.entries(contentUpdateTranslations).forEach(([language, entries]) => {
+  window.PSYCHE_TRANSLATIONS[language] = {
+    ...(window.PSYCHE_TRANSLATIONS[language] || {}),
+    ...entries,
+  };
+});
